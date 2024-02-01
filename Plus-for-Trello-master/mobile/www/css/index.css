@@ -1,0 +1,590 @@
+﻿
+.settingsElement {
+     text-align: left;
+}
+
+.plusPage {
+    max-width:50em !important;
+    margin-left:auto;margin-right:auto !important;
+    touch-action: manipulation !important;
+    -ms-touch-action: manipulation !important;
+    position: static !important; /* overwrite jqm */
+}
+
+.helpDark {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+#panelAddSE input:disabled {
+    background-color: white !important;
+}
+
+#plusToasterMessage {
+    position: fixed;
+    z-index:2147483647;
+    top: 0;
+    width:100%;
+    height:auto;
+    background-color: #383838;
+    color: #F0F0F0;
+    padding:10px;
+    text-align:center;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+    -moz-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+    box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+}
+
+table {
+    font-size: 100% !important;
+}
+
+
+.shrinkElementScale {
+ -webkit-transform: scale(0.85) !important;
+ -moz-transform: scale(0.85) !important;
+ -ms-transform: scale(0.85) !important;
+ -o-transform: scale(0.85) !important;
+ transform: scale(0.85) !important;
+
+ -webkit-transform-origin: 0 0 !important;
+ -moz-transform-origin: 0 0 !important;
+ -ms-transform-origin: 0 0 !important;
+ -o-transform-origin: 0 0 !important;
+ transform-origin: 0 0 !important;
+ width: 117.64% !important;
+}
+
+.shrinkElementScaleWithZoom {
+    zoom: 0.85 !important;
+}
+
+.hiliteNewReportRow {
+    background-color:#61BD4F !important;
+}
+
+.ui-toolbar-back-btn {
+border-top:0px !important;
+border-bottom:0px !important;
+border-right:0px !important;
+border-left:0px !important;
+border-color:transparent !important;
+border-radius: 0px 0px 0px 0px !important;
+border: 0px !important;
+box-shadow:0px 0px 0px 0px !important;
+color: white !important;
+}
+
+.headerLink {
+    color:white;
+    font-size:80%;
+    margin-top:8px;
+    text-decoration: none !important;
+    margin-right:1em;
+}
+
+#daysAndUser {
+    width:4em;
+}
+
+
+.agile_flat_border {
+border-radius: 0 !important;
+}
+
+.ui-input-text.ui-custom-noborders {
+   border: none;
+   box-shadow: none;
+   border-image:none !important;
+    border-image-width: 0px;
+    border-color:transparent !important;
+    border-style:none !important;
+    border-radius: 0 !important;
+}
+
+.disabledClicks {
+pointer-events:none !important;
+}
+
+.seSeparator {
+    margin-left:1em;
+    margin-right:1em;
+    font-weight:bold;
+    color: #585858 !important;
+}
+
+.seInputStyles {
+    box-shadow: none !important;
+    border-image:none !important;
+    border-image-width: 0px;
+    border-color:transparent !important;
+    border-style:none !important;
+    border-radius: 0 !important;
+    border:none !important;
+    margin:4px !important;
+}
+
+.seLeftLabels {
+   margin:4px !important;
+   font-weight:bold !important;
+   color: #585858 !important;
+}
+
+.seNumbers {
+    width: 3em !important;
+    text-align: center !important;
+    margin-right:0px !important;
+    font-size:200% !important;
+}
+
+.seNumbersWeb {
+    width: 2.6em !important;
+    text-align: center !important;
+    margin-right:0px !important;
+    font-size:150% !important;
+    height: 1.6em !important;
+}
+
+.hmsLabel {
+    color:#d8d8d8 !important;
+    overflow:hidden !important;
+}
+
+.custom-label-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+    text-indent:-3.7em !important;
+}
+
+.custom-label-flipswitch.ui-flipswitch .ui-flipswitch-off {
+    text-indent: 1em !important;
+}
+
+/* prevent click on flipswitch from causing a "hover" effect on text */
+.ui-page-theme-b .ui-btn:hover, html .ui-bar-b .ui-btn:hover, html .ui-body-b .ui-btn:hover, html body .ui-group-theme-b .ui-btn:hover, html head + body .ui-btn.ui-btn-b:hover
+{
+color:inherit !important;
+text-shadow:inherit !important;
+}
+
+.topPageTitle {
+    color:white;
+    text-shadow:0;
+    text-align:center;
+}
+
+
+.pageText {
+    color:white;
+    text-shadow:0;
+    text-align:left;
+}
+
+.cardBackground {
+background-color:#FAFAFA !important;
+}
+
+#cardDesc a {
+font-weight:normal !important;
+}
+
+[data-role="page"] {
+     min-height:100px !important; /* jqm sets pages height too big. can be seen if you try to scroll a page that fits whole. without this it will scroll */
+    -webkit-transform: translate3d(0px,0px,0px);
+    transform: translate3d(0px,0px,0px);
+}
+
+[data-role="content"] {
+    padding:6px;
+}
+
+.pinnedCardSubtext {
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.pinnedCardElement {
+    padding-top:6px !important;
+    padding-bottom:6px !important;
+}
+
+.ui-icon-syncAnim {
+	background-image: url("../img/sync.png");
+    background-size: 17px 17px;
+    background-repeat:no-repeat;
+    padding-left:3.5px;
+    padding-top:7.5px;
+    margin-right:63px !important;
+    -webkit-animation:spin .7s linear infinite;
+    -moz-animation:spin .7s linear infinite;
+    animation:spin .7s linear infinite;
+}
+
+.ui-icon-syncOffline {
+	background-image: url("../img/offline.png");
+    background-size: 17px 17px;
+    background-repeat:no-repeat;
+    padding-left:3.5px;
+    padding-top:6.5px;
+    margin-right:63px !important;
+}
+
+.ui-icon-trelloopen  {
+	background-image: url("../img/trelloopen.png");
+    background-size: 27px 17px;
+    background-repeat:no-repeat;
+    background-position:left;
+}
+
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+.ui-icon-syncStatic {
+	background-image: none;
+    display:none !important;
+}
+
+#plusCardCommentEnterButton {
+margin-top:0em;
+margin-bottom:0em;
+}
+
+
+#plusCardCommentNote {
+    margin-top:0px !important;
+    padding:6px !important;
+    margin-right:1em !important;
+    
+}
+
+.noMarginPaddingTop {
+    margin-top:0px !important;
+    padding-top:0px !important;
+}
+
+#plusCardCommentCancelButton {
+border-width:0px;
+margin-top:-10px;
+margin-right:-0px;
+}
+
+#seContainer table,#seContainer th,#seContainer td {
+border-collapse: collapse;
+border: 1px solid #EEEEEE;
+padding:2px;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+#seContainer {
+margin-bottom:1em;
+}
+
+#cardTitle {
+display:inline-table;
+margin-bottom: .1em;
+margin-top:0px;
+}
+
+th, td {
+overflow: hidden;
+white-space: nowrap;
+border-collapse: collapse;
+}
+
+.colUser {
+    min-width: 2em;
+    max-width: 6em;
+}
+
+.colSSum {
+    min-width: 2em;
+    max-width: 4em;
+}
+
+.colEFirst {
+    min-width: 2em;
+    max-width: 4em;
+}
+
+.colESum {
+    min-width: 2em;
+    max-width: 4em;
+}
+
+.colR {
+    min-width: 2em;
+    max-width: 4em;
+}
+
+.ui-dialog .ui-dialog-contain
+{
+    margin-top: 0;
+}
+
+.floatRight {
+    float:right !important;
+}
+
+#plusWelcome, #plusWelcome a{
+   vertical-align: middle;
+   color:white;
+}
+
+#imgDonate
+{
+    display:block;
+    margin:auto;
+    cursor:pointer;
+}
+
+.imgLogin
+{
+    display:inline;
+}
+
+.imgHeader
+{
+    display:inline;
+    margin-top:0px;
+    margin-right:3px;
+    padding-left:5px;
+}
+
+.userTrello {
+    cursor: pointer;
+    margin-top:3px !important;
+}
+
+#openAsDesktopPopup {
+position:absolute;
+left:2px;
+top:2px;
+}
+
+.userTrello div {
+display:inline-block;
+margin-left:.3em;
+vertical-align:top;
+font-weight:normal;
+text-overflow:clip !important;
+white-space: nowrap;
+overflow: hidden;
+width:100%;
+font-size:70%;
+}
+
+.userTrello img {
+        margin-left: 4px;
+    }
+
+.noshadow {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+
+.headerShadow {
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.plusHeader {
+    padding-top: 7px;
+    color: white;
+    border: none;
+    cursor: default;
+    background: #00407F;
+    height: 34px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hideElement {
+    display: none !important;
+}
+
+.animateTransitions {
+    -webkit-transition: -webkit-transform 0.2s linear !important;
+    -moz-transition: -moz-transform 0.2s linear !important;
+    -o-transition: -o-transform 0.2s linear !important;
+    transition: transform 0.2s linear !important;
+}
+
+
+.clicks-not-active {
+   pointer-events: none !important;
+}
+
+
+.shiftUp {
+    transform: translate3d(0,-3em,0) !important;
+    -ms-transform:translate3d(0,-3em,0) !important;
+     -webkit-transform:  translate3d(0,-3em,0) !important;
+    opacity:0 !important;
+  }
+
+#panelAddSEContainer {
+    transform-origin: left top !important;
+    -webkit-transform-origin:left top !important;
+    -ms-transform: scale(1,1); /* IE 9 */
+   	-webkit-transform: scale(1,1); /* Chrome, Safari, Opera */
+    transform: scale(1,1);
+}
+
+.seSuperWrapper {
+    height:3em !important;
+    overflow:hidden !important;
+}
+
+#pageCardDetail .ui-dialog-contain .ui-content {
+overflow-x:visible !important;
+}
+
+#panelAddSE {
+    z-index:2147483640;
+    margin-top:-3.5em !important;
+    transform-origin: left top !important;
+    -webkit-transform-origin:left top !important;
+    border: solid;
+    border-color:#DDDDDD;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-right-width:1px;
+    border-top-width:0px;
+    border-radius:2px;
+    padding:5px;
+    margin-left:-11px;
+    margin-right:-11px;
+    margin-bottom:5px;
+    background-color:#F7F7F7;
+    box-shadow: 0px 3px 3px #AAAAAA;
+}
+
+.opacityFull {
+    z-index:2147483640 !important;
+     -ms-transform: scale(1,1) translate3d(0, 0, 0) !important; /* IE 9 */
+   	-webkit-transform: scale(1,1) translate3d(0, 0, 0) !important; /* Chrome, Safari, Opera */
+    transform: scale(1,1) translate3d(0, 0, 0) !important;
+}
+
+.opacityZero {
+    opacity:0 !important;
+    -ms-transform: scale(0,0) translate3d(0, 0, 0) !important; /* IE 9 */
+   	-webkit-transform: scale(0,0) translate3d(0, 0, 0) !important; /* Chrome, Safari, Opera */
+    transform: scale(0,0) translate3d(0, 0, 0) !important;
+    z-index:-9999 !important;
+    pointer-events: none;
+}
+
+.plusShiftTop {
+    -ms-transform: translate3d(0px,-41px,0) !important; /* IE 9 */
+   	-webkit-transform: translate3d(0px,-41px,0) !important; /* Chrome, Safari, Opera */
+    transform: translate3d(0px,-41px,0) !important;
+}
+
+#daysAndUserContent {
+overflow-x: hidden;
+overflow-y: hidden;
+white-space: nowrap;
+width:100%;
+}
+
+.noWrapElem {
+display:inline-block !important;
+}
+
+#cardBottomContainer {
+margin-top: -12em !important;
+}
+
+
+.plusShiftBottom {
+    -ms-transform: translate3d(0px,10.5em,0); /* IE 9 */
+   	-webkit-transform: translate3d(0px,10.5em,0); /* Chrome, Safari, Opera */
+    transform: translate3d(0px,10.5em,0);
+}
+
+
+#cardBottomPadding {
+    padding-bottom:9.6em !important;
+}
+
+#cardBottomExtraHelpPadding {
+    padding-bottom:12em !important;
+}
+
+.plusCardCommentUser-width {
+max-width:60% !important;
+overflow:hidden !important;
+}
+
+.tdVisibleOverflow {
+overflow:visible !important;
+}
+
+
+.textSmaller {
+font-size:85%;
+}
+
+
+
+.plusHeader h1 {
+margin-top:-6px !important;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:clip !important;
+}
+
+.backgroundShader {
+    background: lightGray !important;
+    border: 1px solid lightGray !important;
+    color: darkgray !important;
+}
+
+.plusCardCommentUser-width .ui-mini { /* fix crop bug in jqm combining with &nbsp before button */
+    margin-left: 0px !important;
+}
+
+.agile_button_leftmargin { /* fix crop bug in jqm */
+  margin-left:1px;
+}
+
+.agile_nofocusRing:focus {
+    outline-width:0px !important;
+    outline:none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui-btn:focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+}
+
+.ui-focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+}
+
+.agile_box_input_hilite {
+	background: yellow !important;
+    color:black !important;
+}
+
+.agile_SER_negative {
+    background-color: #e69d9d !important;
+}
+
+#plusCardEditMessage {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    white-space: normal !important;
+}

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html style="background-color:#0079BF;">
+    <head>
+        <title>Plus for Trello</title>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#0079BF">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' plusfortrello: data: gap: https://ssl.gstatic.com https://cdnjs.cloudflare.com 'unsafe-eval'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; media-src blob: file:; connect-src * file:; child-src * file:;img-src * data: blob: file:;">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <script type="text/javascript" src="js/redirector-v33.js"></script>
+    </head>
+    <body>
+        <div data-role="page" style="display:none;" class="plusPage" id="pageCardDetail" data-dialog="true">
+            <div data-role="content" class="cardBackground">
+            <div style="height:1em;"></div>
+                <div class="seSuperWrapper">
+                    <div id="panelAddSEContainer" class="animateTransitions">
+                        <a id="addSE" href="#" data-role="button" data-icon="plus" data-mini="true" data-inline="true" class="agile_button_leftmargin">add S/E</a>
+                        <input type="checkbox" tabindex="-1" data-inline="true" data-theme="b" data-role="flipswitch" id="cardPin" data-on-text="pinned" data-off-text="pin" data-wrapper-class="custom-label-flipswitch">
+                        <a class="floatRight ui-btn ui-btn-icon-notext ui-icon-trelloopen ui-nodisc-icon agile_nofocusRing" id="openTrelloCard" href="#" data-iconshadow="false" style="display:none;border:none;background-color: transparent;"></a>                  
+                    </div>
+                </div>
+                <form autocomplete="off" id="panelAddSE" class="opacityZero animateTransitions">
+                    <table id="daysAndUserContent">
+                        <tr>
+                            <td class="noWrapElem plusCardCommentUser-width">
+                                <select data-inline="true" data-mini="true" id="plusCardCommentKeyword" class="noshadow"></select>
+                            </td>
+
+                            <td class="noWrapElem plusCardCommentUser-width">
+                                <select data-inline="true" data-mini="true" id="plusCardCommentUser" class="noshadow"></select>
+                            </td>
+
+                            <td class="noWrapElem plusCardCommentUser-width">
+                                <select data-inline="true" data-mini="true" id="plusCardCommentDays" class="noshadow"></select>
+                            </td>
+
+                            <td align="right" class="tdVisibleOverflow">
+                                <a id="plusCardCommentCancelButton" title="Cancel" href="#" tabindex="9801" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all"></a>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="#seTable">
+                        <tr>
+                            <td>
+                                <span class="seLeftLabels">S</span><input autocomplete="off" id="plusCardCommentSpent" type="number" class="agile_spent_box_input seInputStyles seNumbers seFormElem" data-role="none" data-inline="true" />
+                                <span id="spentUnit" class="hmsLabel textSmaller">h</span><span class="seSeparator">:</span>
+                                <input autocomplete="off" id="plusCardCommentSpent2" type="number" step="15" class="agile_spent_box_input seInputStyles seNumbers seFormElem" data-role="none" data-inline="true" />
+                                <span id="spentSubUnit" class="hmsLabel textSmaller">m</span>
+                                <br />
+                                <span class="seLeftLabels">E</span><input autocomplete="off" id="plusCardCommentEst" type="number" class="agile_estimation_box_input seInputStyles seNumbers seFormElem" data-role="none" data-inline="true" />
+                                <span id="estUnit" class="hmsLabel textSmaller">h</span><span class="seSeparator">:</span>
+                                <input autocomplete="off" id="plusCardCommentEst2" type="number" step="15" class="agile_estimation_box_input seInputStyles seNumbers seFormElem" data-role="none" data-inline="true" />
+                                <span id="estSubUnit" class="hmsLabel textSmaller">m</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width:100%;">
+                        <tr>
+                            <td class="noWrapElem noMarginPaddingTop" style="width:100%;" valign="top">
+                                <input autocomplete="off" style="width:100%;" id="plusCardCommentNote" placeholder=" note" type="text" data-wrapper-class="ui-custom-noborders" class="agile_note_box_input seInputStyles seFormElem" data-role="none" />
+                                <div id="plusCardEditMessage" class="textSmaller">&nbsp;</div>
+                            </td>
+                            <td valign="bottom" class="tdVisibleOverflow" align="right">
+                                <a id="plusCardCommentEnterButton" title="Enter" href="#" tabindex="9800" class="tdvisibleoverflow ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div style="margin:0px;padding:0px;">
+                    <br />
+                    <div id="cardBottomContainer" class="animateTransitions">
+                        <div id="seContainer" style="display:none;">
+                            <table style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th class="colUser">User</th>
+                                        <th class="colSSum">S <span style="font-size:80%">sum</span></th>
+                                        <th class="colEFirst">E 1<sup>st</sup></th>
+                                        <th class="colESum">E <span style="font-size:80%">sum</span></th>
+                                        <th class="colR">R <span style="font-size:80%">(E-S)</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div id="cardTitleAndDesc">
+                            <h3 id="cardTitle"></h3>
+                            <div style="margin-bottom: 1em;"><span id="cardBoard"></span><span style="color:#BDBDBD;"> in </span><span id="cardList"></span></div>
+                            <div id="cardDesc" style="margin-bottom: .1em;word-wrap: break-word;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cardBottomPadding"></div>
+                    <div id="cardBottomExtraHelpPadding" style="display:none;"></div>
+                </div>
+                <div id="helpCard" style="display:none;font-size:95% !important;padding:1em;padding-bottom:0.5em !important;position:fixed;z-index: 2147483647;top:34px;left:0px;align-content:center;background-color:#e4f0f6;">
+                    <p align="center">Configure Plus preferences and get help from the gear top-right.</p>
+                    <p align="center">Plus for Trello adds card comments to store the "Spent / Estimate" rows you enter here.</p>
+                    <p align="center">
+                        <a href="http://www.plusfortrello.com" target="_blank">About Plus for Trello</a>
+                        <br /><br />
+                        <a href="http://www.plusfortrello.com/p/how-plus-tracks-spent-and-estimate-in.html" target="_blank">The Plus Spent / Estimate system</a>
+                        <br />
+                    </p>
+                    <p align="center">
+                        <a id="okCardHelp" href="#" data-role="button" data-inline="true" data-icon="check">OK</a>
+                    </p>
+                </div>
+                <div id="helpCard_SE" style="color:black !important;display:none;width:100%;height:100%;font-size:90% !important;padding:1em !important;padding-bottom:0.5em !important;position:fixed;z-index: 2147483646;top:34px;left:0px;align-content:center;background-color:#e4f0f6;">
+                    <div class="floatRight" style="margin-right:1em;"><a id="okCardHelp_SE" href="#" data-role="button" data-inline="true" data-mini="true" data-icon="check">OK</a></div>
+                    <p align="left"><span class="helpDark">S</span>: Spent</p>
+                    <p align="left"><span class="helpDark">E</span>: Estimate</p>
+                    <p align="left"><span class="helpDark">R</span>: Remain = Estimate - Spent</p>
+                    <p><span class="helpDark">E 1<sup>st</sup></span>: First estimate (per user per card)</p>
+                    <p align="center"><b>Each S/E entry adds to the sums</b><br />(or substracts when negative)</p>
+                    <p align="center">A card is done when R is zero.<br />If not done, increase the estimate<br />so R is positive.</p>
+                    <p align="center">
+                        Enter transfers in Trello with<br />the <a id="helpPlusCommentFormat_SE" href="" data-transition="none">Plus card comment format</a>
+                        <br /><br />Read about<br />
+                        <a id="plusSESystemHelp_SE" href="">The Plus Spent / Estimate system</a>
+                        <br /><br />Use the gear top-right to set your<br />preferences and more help.
+                    </p>
+                   
+                </div>
+            </div><!-- /content -->
+        </div><!-- /page -->
+</body>
+</html>
