@@ -1,0 +1,5 @@
+select a.LOB, a.PROCESS_KEY, a.PROCESS_NAME, A.IN_CHARGE, a.LOG_DATE, sum(a.TOTAL_DURATION) as TOTAL_DURATION from (
+select lob, iif(instr(1, PROCESS_KEY, "_") = 0, PROCESS_KEY, left(PROCESS_KEY, instr(1, PROCESS_KEY, "_") -1)) AS PROCESS_KEY, process_name, in_charge, format(log_date, 'mm/dd/yyyy') AS LOG_DATE, sum(duration) as TOTAL_DURATION from task_duration
+group by lob, process_key, process_name, in_charge, format(log_date, 'mm/dd/yyyy')) a
+group by a.lob, a.process_key, a.process_name, a.in_charge, a.log_date 
+order by lob, process_key desc, process_name, in_charge
