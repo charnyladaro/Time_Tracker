@@ -1,0 +1,15 @@
+1. Save entire folder as shared drive folder
+2. Ask employee to open the Excel file in read only mode, if it ask. There will be no impact on functionality
+3. Excel tool will serve as front-end
+4. Password for Excel and Database is thedatalabs
+
+
+Please like, share, comment and share.
+
+Please leave a comment if you want similiar type of tool at free of cost.
+
+Please visit our website wwww.thedatalabs.org
+
+Mail to us on thedatalabs@gmail.com
+
+Thanks! Have a great day!! :)
