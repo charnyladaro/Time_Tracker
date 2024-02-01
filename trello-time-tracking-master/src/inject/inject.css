@@ -1,0 +1,11 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+.ttt-comment {
+    /*border: 5px solid red;*/
+    padding-left: 8px !important;
+    border-left: 2px solid red;
+}
+.ttt-comment-hidden {
+    display: none;
+}

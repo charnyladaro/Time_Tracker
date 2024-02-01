@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+    <script src="https://trello.com/power-ups/power-up.min.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+      button { width: 100%; margin: 0 0 6px 0; }
+      .time-stat-line {
+        font-size: 17px;
+        margin: 10px 0 10px 0;
+        height: 18px;
+      }
+      .time-stat-line span.tm {
+        font-weight: 600;
+      }
+      button.negate {
+        color: #fff;
+        background-color: #CF513D;
+        background: linear-gradient(to bottom, #CF513D 0%, #B04632 100%);
+        box-shadow: 0 2px 0 #833327;
+      }
+      button.negate:focus, button.negate:hover {
+        color: #fff;
+        background-color: #CF513D;
+        background: linear-gradient(to bottom, #CF513D 0%, #9d3e2c 100%);
+        box-shadow: 0 2px 0 #833327;
+      }
+    </style>
+    <div id="content">
+      <div class="time-stat-line">Time spent: <span class="tm" id="timePlaceTotal">00:00:00</span></div>
+      <div class="time-stat-line">Money made: <span class="tm" id="moneyPlace">0$</span></div>
+      <button id="buttonReset" class="negate">Reset</button>
+    </div>
+    <script src="./js/totalStatistics.js"></script>
+  </body>
+</html>
